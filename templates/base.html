@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}What To Do{% endblock %}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/plugins.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/colors/violet.css') }}">
+    <link type="text/css" rel="preload" href="{{ url_for('static', filename='css/fonts/urbanist.css') }}" as="style" onload="this.rel='stylesheet'">
+</head>
+<body>
+  <div class="content-wrapper">
+    <header class="wrapper bg-soft-primary">
+      <nav class="navbar navbar-expand-lg center-logo transparent position-absolute navbar-dark">
+        <div class="container justify-content-between align-items-center">
+          <div class="d-flex flex-row w-100 justify-content-between align-items-center d-lg-none">
+            <div class="navbar-brand"><a href="#">
+                <img class="logo-dark" src="{{ url_for('static', filename='img/dragon-lord-dark-logo.svg') }}"  alt="" width="150px"/>
+                <img class="logo-light" src="{{ url_for('static', filename='img/dragon-lord-light-logo.svg') }}"  alt="" width="150px"/>
+              </a></div>
+            <div class="navbar-other ms-auto">
+              <ul class="navbar-nav flex-row align-items-center">
+                <li class="nav-item d-lg-none">
+                  <button class="hamburger offcanvas-nav-btn"><span></span></button>
+                </li>
+              </ul>
+              <!-- /.navbar-nav -->
+            </div>
+            <!-- /.navbar-other -->
+          </div>
+          <!-- /.d-flex -->
+          <div class="navbar-collapse-wrapper d-flex flex-row align-items-center w-100">
+            <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+              <div class="offcanvas-header mx-lg-auto order-0 order-lg-1 d-lg-flex px-lg-15">
+                <a href="#" class="transition-none d-none d-lg-flex">
+                    <img class="logo-dark" src="{{ url_for('static', filename='img/dragon-lord-dark-logo.svg') }}"  alt="" width="150px"/>
+                    <img class="logo-light" src="{{ url_for('static', filename='img/dragon-lord-light-logo.svg') }}"  alt="" width="150px"/></a>
+                <h3 class="text-white fs-30 mb-0 d-lg-none">What To Do</h3>
+                <button type="button" class="btn-close btn-close-white d-lg-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="w-100 order-1 order-lg-0 d-lg-flex offcanvas-body">
+                <ul class="navbar-nav ms-lg-auto">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="/" >Notes</a>
+                  </li>
+                </ul>
+                <!-- /.navbar-nav -->
+              </div>
+              <div class="w-100 order-3 order-lg-2 d-lg-flex offcanvas-body">
+                <ul class="navbar-nav me-lg-auto">
+                  <li class="nav-item dropdown dropdown-mega">
+                    <a class="nav-link" href="/contact" >Contact</a>
+                    <!--/.dropdown-menu -->
+                  </li>
+                </ul>
+                <!-- /.navbar-nav -->
+              </div>
+              <div class="offcanvas-body d-lg-none order-4 mt-auto">
+                <div class="offcanvas-footer">
+                  <div>
+                    <a href="mailto:first.last@email.com" class="link-inverse">info@email.com</a>
+                    <br /> 00 (123) 456 78 90 <br />
+                    <nav class="nav social social-white mt-4">
+                      <a href="#"><i class="uil uil-twitter"></i></a>
+                      <a href="#"><i class="uil uil-facebook-f"></i></a>
+                      <a href="#"><i class="uil uil-dribbble"></i></a>
+                      <a href="#"><i class="uil uil-instagram"></i></a>
+                      <a href="#"><i class="uil uil-youtube"></i></a>
+                    </nav>
+                    <!-- /.social -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.navbar-collapse-wrapper -->
+        </div>
+        <!-- /.container -->
+      </nav>
+      <!-- /.navbar -->
+    </header>
+    <!-- /header -->
+
+      <div>
+
+      {% block content %}
+      {% endblock %}
+
+      </div>
+
+  <footer class="bg-light">
+    <div class="container pb-13 pb-md-15">
+      <div class="card image-wrapper bg-full bg-image bg-overlay bg-overlay-300 mb-14" data-image-src="{{ url_for('static', filename='img/photos/bg16.png') }}">
+        <div class="card-body p-10 p-xl-12">
+          <div class="row text-center">
+            <div class="col-xl-11 col-xxl-9 mx-auto">
+              <h2 class="fs-16 text-uppercase text-white mb-3">Join Our Community</h2>
+              <h3 class="display-3 mb-8 px-lg-8 text-white">We are <span class="underline-3 style-2 yellow">trusted</span> by over 5000+ clients. Join them now and grow your business.</h3>
+            </div>
+            <!-- /column -->
+          </div>
+          <!-- /.row -->
+          <div class="d-flex justify-content-center">
+            <span><a class="btn btn-white rounded">Get Started</a></span>
+          </div>
+        </div>
+        <!--/.card-body -->
+      </div>
+      <!--/.card -->
+      <div class="row gy-6 gy-lg-0">
+        <div class="col-md-4 col-lg-3">
+          <div class="widget">
+            <img class="logo-dark" src="{{ url_for('static', filename='img/dragon-lord-dark-logo.svg') }}"  alt="" width="150px"/>
+            <p class="mb-4">© 2023 DragonLord. <br class="d-none d-lg-block" />All rights reserved.</p>
+            <nav class="nav social ">
+              <a href="#"><i class="uil uil-twitter"></i></a>
+              <a href="#"><i class="uil uil-facebook-f"></i></a>
+              <a href="#"><i class="uil uil-dribbble"></i></a>
+              <a href="#"><i class="uil uil-instagram"></i></a>
+              <a href="#"><i class="uil uil-youtube"></i></a>
+            </nav>
+            <!-- /.social -->
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /column -->
+        <div class="col-md-4 col-lg-3">
+          <div class="widget">
+            <h4 class="widget-title  mb-3">Get in Touch</h4>
+            <address class="pe-xl-15 pe-xxl-17">Moonshine St. 14/05 Light City, London, United Kingdom</address>
+            <a href="mailto:#" class="link-body">info@email.com</a><br /> 00 (123) 456 78 90
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /column -->
+        <div class="col-md-4 col-lg-3">
+          <div class="widget">
+            <h4 class="widget-title  mb-3">Learn More</h4>
+            <ul class="list-unstyled text-reset mb-0">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /column -->
+        <div class="col-md-12 col-lg-3">
+          <div class="widget">
+            <h4 class="widget-title  mb-3">Our Newsletter</h4>
+            <p class="mb-5">Subscribe to our newsletter to get our news & deals delivered to you.</p>
+            <div class="newsletter-wrapper">
+              <!-- Begin Mailchimp Signup Form -->
+              <div id="mc_embed_signup2">
+                <form action="#" method="post" id="mc-embedded-subscribe-form2" name="mc-embedded-subscribe-form" class="validate " target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll2">
+                    <div class="mc-field-group input-group form-floating">
+                      <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="Email Address" id="mce-EMAIL2">
+                      <label for="mce-EMAIL2">Email Address</label>
+                      <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe2" class="btn btn-primary ">
+                    </div>
+                    <div id="mce-responses2" class="clear">
+                      <div class="response" id="mce-error-response2" style="display:none"></div>
+                      <div class="response" id="mce-success-response2" style="display:none"></div>
+                    </div> <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ddc180777a163e0f9f66ee014_4b1bcfa0bc" tabindex="-1" value=""></div>
+                    <div class="clear"></div>
+                  </div>
+                </form>
+              </div>
+              <!--End mc_embed_signup-->
+            </div>
+            <!-- /.newsletter-wrapper -->
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /column -->
+      </div>
+      <!--/.row -->
+    </div>
+    <!-- /.container -->
+  </footer>
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+
+  </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/theme.js') }}"></script>
+
+</body>
+</html>
